@@ -1,4 +1,11 @@
 #!/bin/bash
+ 
+# Run Commands:
+# bash check.sh                  # run lint + prettier check
+# bash check.sh --fix            # run lint + prettier auto-fix
+# bash check.sh --no-lint        # prettier only
+# bash check.sh --no-prettier    # lint only
+# bash check.sh --no-lint --fix  # prettier auto-fix only
 
 # --- Feature toggles ---
 RUN_LINT=true
