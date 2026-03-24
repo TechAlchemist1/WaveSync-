@@ -22,6 +22,8 @@ for arg in "$@"; do
 done
 
 # --- Run ---
+# -- Enter correct directory (assuming this script is in the project root)
+cd frontend
 FAILED=false
 
 if $RUN_LINT; then
