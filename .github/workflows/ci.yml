@@ -20,15 +20,20 @@ jobs:
         with:
           node-version: 22
           cache: npm
+          cache-dependency-path: frontend/package-lock.json
 
       - name: Install dependencies
+        working-directory: frontend
         run: npm ci
 
       - name: TypeScript type check
+        working-directory: frontend
         run: npx tsc --noEmit
 
       - name: ESLint
+        working-directory: frontend
         run: npx expo lint
 
       - name: Prettier
+        working-directory: frontend
         run: npx prettier --check "**/*.{ts,tsx,js,jsx,json}"
